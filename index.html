@@ -29,6 +29,10 @@
             <img src="mc_logo.png" alt="Millennium" />   
         </header>
 
+         <!-- This form was made so that the action can take place. All the labels 
+        and inputs represent the selections in the customer info. I also added patterns to the phone number an postal code
+        so the user knows they both need x amount of numbers. I used a fieldset and inside that fieldset I used multiple divs
+        of the survey. The inputs NEED to have an id if you put a name. --> 
         <form id="survey" action="http://www.mill_computers.com/orders/process.cgi" method="POST" >
             <fieldset id="custInfo">
                 <legend>Custumer Information</legend>
@@ -69,6 +73,8 @@
                         <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" /> 
                 </div>
 
+                <!-- For this specific div I used options so that the user can have the option to pick which processor Memory
+                they would like. I did the same with all the rest of the options. -->
                <div>
                    <label for="Computers">Processor Memory</label>
                    <select name="proMemory" id="pro">
@@ -87,30 +93,41 @@
                        <option value="memory4">8 GB</option> 
                    </select>
                </div>
-<br>
-               <label for="DVD">DVD Burner</label>
+<br>            
+               <!-- For these specific divs I used muliple labels and inputs inside the divs for the yes or no questions
+                because this shows up on the web page as two bubbles with yes and no next to them so that the user can
+                choose. -->
                <div>
+                    <label for="DVD">DVD Burner</label>0
                     <label for="dYes">Yes</label>
                     <input name="dBurner" id="fYes" value="yes" type="radio">
                     <label for="dNo">No</label>
                     <input name="dBurner" id="fNo" value="no" type="radio"> 
                </div>
 <br>
-               <label for="tuner">Turner Card</label>
                <div>
+                       <label for="tuner">Turner Card</label> 
                        <label for="tYes">Yes</label>
                        <input name="tCard" id="tYes" value="yes" type="radio">
                        <label for="tNo">No</label>
                        <input name="tCard" data-ng-if="tNo" value="no" type="radio">
                </div>
 <br>
-               <label for="tuner">Media Card Reader</label>
                <div>
+                        <label for="tuner">Media Card Reader</label>
                         <label for="mYes">Yes</label>
                         <input name="mCard" id="mYes" value="yes" type="radio">
                         <label for="mNo">No</label>
                         <input name="mCard" data-ng-if="mNo" value="no" type="radio">
                </div>
+
+               <br> 
+               <!-- For this last div I just added submit and cancel buttons at the bottom of the page so that the user can 
+                submit their survey -->
+               <div id="buttons">
+                <input type="submit" value="Submit My Survey" />
+                <input type="reset" value="Cancel" />
+            </div>
 
             </fieldset>
         </form>
