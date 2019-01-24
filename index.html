@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!--
+      New Perspectives on HTML5 and CSS3, 7th Edition
+      Tutorial 7
+      Tutorial Case
+
+      Red Ball Pizza Survey Form
+      Author: Angelina Stilphen
+      Date:  1.23.19
+
+      Filename:   mc_pc.html
+
+        -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Millennium Computers</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="mc_styles.css" />
+        <link rel="stylesheet" href="mc.forms.css" />
+        <script src="mc_script.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <img src="mc_logo.png" alt="Millennium" />   
+        </header>
+
+        <form id="survey" action="http://www.mill_computers.com/orders/process.cgi" method="POST" >
+            <fieldset id="custInfo">
+                <legend>Custumer Information</legend>
+
+                <div class="formRow">
+                    <label for="name">First Name*</label>
+                    <input type="text" name="fName" id="name" required />
+                </div>
+
+                <div class="formRow">
+                        <label for="name">Last Name*</label>
+                        <input type="text" name="lName" id="name" required />
+                    </div> 
+
+                <div class="formRow">
+                        <label for="street">Street Address</label>  
+                        <input name="custStreet" id="street" type="text" />
+                </div>
+        
+                <div class="formRow">
+                        <label for="city">City</label>
+                        <input name="custCity" id="city" type="text" value="Glendale" />
+                
+                </div>
+        
+               <div class="formRow">
+                    <label for="state">State</label>  
+                <input name="custState" id="state" type="text" value="AZ" />
+               </div> 
+        
+                <div class="formRow">
+                        <label for="zip">Postal Code</label>    
+                        <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" pattern="^/d{5}(-/d{4})?$" />
+                </div>
+        
+                <div class="formRow">
+                        <label for="phone">Phone Number</label> 
+                        <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" /> 
+                </div>
+
+               <div>
+                   <label for="Computers">Processor Memory</label>
+                   <select name="proMemory" id="pro">
+                       <option value="pro1">3.2 GHz</option>
+                       <option value="pro2">4.0 GHz</option>
+                       <option value="pro3">5.2 GHz</option>
+                   </select>
+               </div>
+
+               <div>
+                   <label for="Computers">Memory</label>
+                   <select name="CompMemory" id="memory">
+                       <option value="memory1">1 GB</option>
+                       <option value="memory2">2 GB</option>
+                       <option value="memory3">4 GB</option>
+                       <option value="memory4">8 GB</option> 
+                   </select>
+               </div>
+<br>
+               <label for="DVD">DVD Burner</label>
+               <div>
+                    <label for="dYes">Yes</label>
+                    <input name="dBurner" id="fYes" value="yes" type="radio">
+                    <label for="dNo">No</label>
+                    <input name="dBurner" id="fNo" value="no" type="radio"> 
+               </div>
+<br>
+               <label for="tuner">Turner Card</label>
+               <div>
+                       <label for="tYes">Yes</label>
+                       <input name="tCard" id="tYes" value="yes" type="radio">
+                       <label for="tNo">No</label>
+                       <input name="tCard" data-ng-if="tNo" value="no" type="radio">
+               </div>
+<br>
+               <label for="tuner">Media Card Reader</label>
+               <div>
+                        <label for="mYes">Yes</label>
+                        <input name="mCard" id="mYes" value="yes" type="radio">
+                        <label for="mNo">No</label>
+                        <input name="mCard" data-ng-if="mNo" value="no" type="radio">
+               </div>
+
+            </fieldset>
+        </form>
+    </body>
+</html>
